@@ -3,12 +3,8 @@ export default defineAppConfig({
     title: 'moghwan\'s blog',
     // description: 'The minimalist blog theme',
     header: {
-      position: 'left',
-      logo: {
-        path: '/logo.png', // path of the logo
-        pathDark: '/logo-dark.png', // path of the logo in dark mode, leave this empty if you want to use the same logo
-        alt: 'moghwan\'s blog' // alt of the logo
-      }
+      position: 'center',
+      logo: false
     },
     footer: {
       credits: {
@@ -27,5 +23,6 @@ export default defineAppConfig({
         href: 'https://www.linkedin.com/in/moghwan'
       }
     },
+    backToTop: false
   }
 })
