@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   // https://github.com/nuxt-themes/alpine
   extends: '@nuxt-themes/alpine',
   plugins: [
