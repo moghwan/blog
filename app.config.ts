@@ -1,6 +1,6 @@
 export default defineAppConfig({
   alpine: {
-    title: 'moghwan\'s blog',
+    title: 'moghwan.io/b',
     // description: 'The minimalist blog theme',
     header: {
       position: 'center',
