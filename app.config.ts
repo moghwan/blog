@@ -17,7 +17,6 @@ export default defineAppConfig({
     socials: {
       twitter: 'moghwan',
       github: 'moghwan',
-      instagram: '_moghwan',
       linkedin: {
         icon: 'uil:linkedin',
         href: 'https://www.linkedin.com/in/moghwan'
