@@ -16,11 +16,8 @@ const articles = computed(() => _articles.value || [])
 
 <template>
   <div v-if="articles?.length" class="articles-list">
-    <div class="featured">
-      <ArticlesListItem :article="articles[0]" :featured="true" />
-    </div>
     <div class="layout">
-      <ArticlesListItem v-for="(article, index) in articles.slice(1)" :key="index" :article="article" />
+      <ArticlesListItem v-for="(article, index) in articles" :key="index" :article="article" />
     </div>
   </div>
   <div v-else class="tour">
