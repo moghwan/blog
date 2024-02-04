@@ -34,7 +34,7 @@ defineProps({
 css({
   '.hero': {
     '.layout': {
-      display: 'grid',
+      //display: 'grid',
       gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
       gap: '{space.8}',
       '@lg': {
@@ -42,12 +42,14 @@ css({
       },
       img: {
         width: '100%',
-        //aspectRatio: '16 / 9',
         objectFit: 'cover',
         borderRadius: '{radii.md}',
         '&.left': {
           order: -1
-        }
+        },
+        '&.wide': {
+          aspectRatio: '16 / 10',
+        },
       },
     }
   }
