@@ -6,10 +6,14 @@ export default defineNuxtConfig({
     { src: '~/plugins/analytics.client.js', mode: 'client' },
   ],
   modules: [
+    'nuxt-gtag',
     '@nuxthq/studio',
     // https://github.com/nuxt-modules/plausible
     '@nuxtjs/plausible',
     // https://github.com/nuxt/devtools
     '@nuxt/devtools'
-  ]
+  ],
+  gtag: {
+    id: 'G-G84EVVEQYM'
+  }
 })
