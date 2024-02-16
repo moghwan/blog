@@ -2,9 +2,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // https://github.com/nuxt-themes/alpine
   extends: '@nuxt-themes/alpine',
-  plugins: [
-    { src: '~/plugins/analytics.client.js', mode: 'client' },
-  ],
   modules: [
     'nuxt-gtag',
     '@nuxthq/studio',
