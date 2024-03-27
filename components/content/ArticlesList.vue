@@ -9,7 +9,7 @@ const props = defineProps({
 })
 
 // @ts-ignore
-const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).sort({ cover: -1 }).find())
+const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).where({draft: false}).sort({ cover: -1 }).find())
 
 const articles = computed(() => _articles.value || [])
 </script>
