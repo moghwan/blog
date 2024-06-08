@@ -18,6 +18,7 @@ useContentHead(alpine as any)
 </script>
 
 <template>
+  <SolidarityPL />
   <Container class="app-layout">
     <AppLoadingBar />
     <AppHeader v-if="alpine.header" />
