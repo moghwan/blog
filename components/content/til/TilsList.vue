@@ -9,7 +9,7 @@ const props = defineProps({
 })
 
 // @ts-ignore
-const { data: _tils } = await useAsyncData('tils', async () => await queryContent(withTrailingSlash(props.path)).where({draft: false}).sort({ cover: -1 }).find())
+const { data: _tils } = await useAsyncData('tils', async () => await queryContent(withTrailingSlash(props.path)).where({draft: false}).sort({ date: -1 }).find())
 
 const tils = computed(() => _tils.value || [])
 </script>
@@ -17,7 +17,7 @@ const tils = computed(() => _tils.value || [])
 <template>
   <div v-if="tils?.length" class="tils-list">
     <div>
-      <TilsListItem class="til-item" v-for="(til, index) in tils" :key="index" :til="til" />
+      <TilsListItem class="til-item" v-for="(til, index) in tils" :key="til._path" :til="til" />
     </div>
   </div>
   <div v-else class="tour">
