@@ -16,8 +16,8 @@ const tils = computed(() => _tils.value || [])
 
 <template>
   <div v-if="tils?.length" class="tils-list">
-    <div class="featured">
-      <TilsListItem v-for="(til, index) in tils" :key="index" :til="til" />
+    <div>
+      <TilsListItem class="til-item" v-for="(til, index) in tils" :key="index" :til="til" />
     </div>
   </div>
   <div v-else class="tour">
@@ -33,17 +33,14 @@ const tils = computed(() => _tils.value || [])
 <style scoped lang="ts">
 css({
   '.tils-list': {
+    '.til-item': {
+      marginBottom: '{space.12}',
+    },
     '@sm': {
       px: '{space.12}',
     },
     '@md': {
       px: 0,
-    },
-    '.featured': {
-      my: '{space.12}',
-      '@md': {
-        my: '{space.8}',
-      }
     },
     '.layout': {
       display: 'grid',
