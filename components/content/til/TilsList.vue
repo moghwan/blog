@@ -4,7 +4,7 @@ import { withTrailingSlash } from 'ufo'
 const props = defineProps({
   path: {
     type: String,
-    default: 'tils'
+    default: 'til'
   }
 })
 
