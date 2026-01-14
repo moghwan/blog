@@ -9,9 +9,16 @@ const props = defineProps({
 })
 
 // @ts-ignore
-const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).where({draft: false}).sort({ cover: -1 }).find())
+const { data: _articles } = await useAsyncData('articles', async () =>
+  await queryContent(withTrailingSlash(props.path))
+    .where({ draft: false })
+    .find()
+)
 
-const articles = computed(() => _articles.value || [])
+const articles = computed(() => {
+  if (!_articles.value) return []
+  return [..._articles.value].sort((a, b) => Number(b.id) - Number(a.id))
+})
 </script>
 
 <template>
